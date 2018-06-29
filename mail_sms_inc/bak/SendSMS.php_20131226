@@ -6,9 +6,9 @@ function GET_POST_FIELD($receivers,$content)
 		die("Error: receivers or content is empty.\n");
 	}
 
-	$account = "ityw";
-	$passwd = "zjxl_ityw!@#";
-	$auth_key = "ityw_12#$";
+	$account = "xxxx";
+	$passwd = "xxxx";
+	$auth_key = "xxxx";
 
 	$md5_sign = MD5_SIGN($receivers,$passwd,$account,$auth_key);
 	
@@ -71,11 +71,11 @@ function SEND_SMS($receivers,$content)
 	$url = "http://sms.4000966666.com:9000/NotificationService/services/notification";
 
 
-        #strins "..detail in mail. 【中交兴路】" : 36 byte.
+        #strins "..detail in mail. 【xxxx】" : 36 byte.
         $content = CUT_STR($content,103);
 
-        //$content = $content." 【中交兴路】";
-        $content = $content." [ZJXL-IT]";
+        //$content = $content." 【xxxx】";
+        $content = $content." [xxxx]";
         var_dump(strlen($content));
 
 	$post_field = GET_POST_FIELD($receivers,$content);
